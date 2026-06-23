@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WikiWeb</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Resumo de Todas as Aulas de HTML</h1>
+      <hr />
+      <h2>Índice:</h2>
+      <nav>
+        <ul>
+          <li><a href="#forms">Formulários</a></li>
+          <li><a href="#structure">Estrutura</a></li>
+          <li><a href="#media">Mídias</a></li>
+          <li><a href="#tables">Tabelas</a></li>
+          <li><a href="#semantic">Semântica</a></li>
+        </ul>
+      </nav>
+      <hr />
+    </header>
+    <main>
+      <section>
+        <h2 id="forms">Formulários:</h2>
+        <h3>
+          Formulários são feitos para preenchimento do usuário e envio de dados
+          para um servidor.
+        </h3>
+        <figure>
+          <img
+            src="form.png"
+            width="400"
+            alt="foto de um código de um formulário"
+          />
+          <figcaption>código de um form</figcaption>
+        </figure>
+        <h3>Formlário Acima:</h3>
+        <form action="" method="get">
+          <h1>Formulário de Preenchimento</h1>
+          <label for="nome">Nome: </label> <input id="nome" type="text" />
+          <br />
+          <label for="">Idade: </label> <input type="number" /> <br />
+          <label for="">E-mail: </label> <input type="email" /> <br />
+          <label for="">Nascimento: </label> <input type="date" /> <br />
+          <label for="">Range: </label> <input type="range" /> <br />
+          <label for="">Arquivo: </label> <input type="file" /> <br />
+          <select name="role" id="">
+            <option selected value="">Selecione sua profissão:</option>
+            <option value="Engenheiro de Software">
+              Engenheiro de Software
+            </option>
+            <option value="Desenvolvedor">Desenvolvedor</option>
+          </select>
+          <br />
+          <p>Quais cargos você deseja?</p>
+          <input
+            type="checkbox"
+            disabled
+            name="cargo[]"
+            value="trainee"
+          />Trainee
+          <br />
+          <input type="checkbox" name="cargo[]" value="Estágio" />Estágio <br />
+          <input type="checkbox" name="cargo[]" value="Júnior" />Júnior <br />
+          <p>Você aceita receber notificações?</p>
+          <input type="radio" name="notify" value="Sim" />Sim
+          <input type="radio" name="notify" value="Não" />Não <br />
+          <br />
+          <label for="">Botão:</label> <input type="submit" value="Enviar" />
+        </form>
+        <h3>Pontos de Atenção:</h3>
+        <ul>
+          <li>
+            O atributo <code>action</code> sinaliza o que acontecerá quando o
+            usuário der o <i>submit</i> deste formulário
+          </li>
+          <li>
+            A tag <code>form</code> pode ter os atributos <code>get</code> e
+            <code>post</code> que alteram como os dados são enviados para o
+            Back-End
+          </li>
+          <li>
+            Um <code>button</code> possui 3 atributos: <code>button</code>,
+            <code>reset</code> e <code>submit</code>
+          </li>
+          <li>
+            O atributo <code>for</code> liga o <code>label</code> a um
+            <code>input</code>. Assim se o usuário clicar no texto, o cursor irá
+            automaticamente para o <code>input</code>
+          </li>
+          <li>
+            Os colchetes na tag <code>checkbox</code> indicam ao Back-End que
+            todos os checkbox se tratam de uma lista, se não apenas o último
+            seria lido
+          </li>
+          <li>
+            As tags <code>radio</code> precisam do atributo
+            <code>name</code> para que o site identifique que se tratam de um
+            mesmo grupo e possua a característica de manter apenas um
+            selecionado
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2 id="structure">Estruturação:</h2>
+        <h3>
+          Importante para manter a estrutura do HTML bem sólida quando tratamos
+          de textos, arquivos e semântica.
+        </h3>
+        <p>
+          Essa parte é mais perceptível no código e não no resultado final do
+          site, mas é de extrema importância
+        </p>
+        <h3>Pontos de Atenção:</h3>
+        <ul>
+          <li>
+            <code>Div</code> pode ser utilizado mas para contêineres genéricos e
+            que não possuem uma tag apropriada, para estruturar o site devemos
+            utilizar: <code>header, main, nav, footer...</code>
+          </li>
+          <li>
+            <code>embed</code> é uma tag caindo em desuso pois não carrega peso
+            semântico, o mais correto é utilizar <code>figure</code> para
+            figuras, <code>iframe</code> para carregar janelas externas...
+          </li>
+          <li>
+            <code>span</code> deve ser utilizado para formatar trechos de código
+            onde o <code>CSS</code> não alcança (apenas um trecho de uma frase
+            ou palavra)
+          </li>
+        </ul>
+        <fieldset>
+          <legend>
+            Este é um exemplo de <code>fieldset</code> utilizado para delimitar
+            um espaço
+          </legend>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.39575742383!2d-46.92496857924023!3d-23.681434554471885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1781834673301!5m2!1spt-BR!2sbr"
+              width="300"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </fieldset>
+      </section>
+      <hr />
+      <section>
+        <h2 id="media">Mídias:</h2>
+        <p>
+          Ao se trabalhar com mídias, temos 4 tags principais além do iframe
+          apresentado acima pela aba do Maps, sendo elas:
+        </p>
+        <ul>
+          <li><code>img</code></li>
+          <li><code>audio</code></li>
+          <li><code>video</code></li>
+          <li><code>track</code></li>
+        </ul>
+        <h3><code>AUDIO</code>, <code>VIDEO</code> e <code>TRACK</code></h3>
+        <ul>
+          <li>
+            As tags <code>audio</code> e <code>video</code>
+            <strong>devem</strong> ter uma tag <code>source</code> dentro dela
+            para indicar onde o arquivo está contido.
+          </li>
+          <li>
+            Possuem um atributo chamado controls que fornece controles básicos
+            para o controle da mídia.
+          </li>
+          <li>
+            O texto colocado abaixo dessa tag serve para quando não há
+            retrocompatibilidade.
+          </li>
+          <li>
+            o atributo <code>track</code> serve para adicionar legendas a um
+            vídeo através de um arquivo de um formato específico
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2 id="tables">Tabelas:</h2>
+        <h3>
+          A tag <code>table</code> deve ser utilizada quando se quiser colocar
+          uma tabela nativa no HTML do site
+        </h3>
+        <figure>
+          <img width="500" src="table.png" alt="foto do código de uma table" />
+          <figcaption>código de uma table</figcaption>
+        </figure>
+        <h3>Tabela do código acima:</h3>
+        <table
+          summary="Tabela de Idades e Nomes"
+          width="300"
+          align="center"
+          cellspacing="0"
+          cellpadding="5"
+        >
+          <!-- Caption é o Título da Tabela -->
+          <caption>
+            Tabela de Idades e Nomes
+          </caption>
+          <thead>
+            <tr>
+              <th colspan="2">Minha Tabela</th>
+            </tr>
+          </thead>
+          <!-- TR são linhas (rows), TD são colunas e TH é o header-->
+          <thead>
+            <tr>
+              <th title="nome completo">Nome</th>
+              <th>Idade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="1">
+              <td>Gustavo</td>
+              <td>21</td>
+            </tr>
+            <tr id="2">
+              <td>Ana</td>
+              <td>19</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Total</td>
+              <td>2</td>
+            </tr>
+          </tfoot>
+        </table>
+        <h3>Pontos de Atenção:</h3>
+        <ul>
+          <li>
+            Por padrão o HTML deixa as <code>tables</code> sem linhas, isso é
+            trabalho para o CSS
+          </li>
+          <li>
+            Uma tabela é organizada em: <code>caption, thead, tbody</code> e
+            <code>tfoot</code> além de <code>tr</code> e <code>td</code>.
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section>
+        <h2 id="semantic">Semântica:</h2>
+        <h3>
+          HTML semântico é o mais importante para otimizar o ARIA
+          (Acessibilidade do site) e o SEO (Search Engine Optimization) para
+          tornar o site mais relevante no Google. Além de manter o código limpo
+          e legível.
+        </h3>
+        <p>Para isso devemos utilizar:</p>
+        <ul>
+          <li>
+            Sempre as tags mais específicas o possível. EX:
+            <ul>
+              <li>
+                USAR: <code>header, footer, main, aside, article...</code>
+              </li>
+              <li>AO INVÉS DE: <code>div, embed, p...</code></li>
+            </ul>
+          </li>
+          <li>
+            Sempre utilizar alternativas que aumentem a acessibilidade e a
+            retrocompatibilidade do site.
+          </li>
+          <li>
+            O ápice do HTML semântico só pode ser atingido com a prática e a
+            pesquisa contínua.
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>Feito de: glimaalv, para: glimaalv.</p>
+    </footer>
+  </body>
+</html>
